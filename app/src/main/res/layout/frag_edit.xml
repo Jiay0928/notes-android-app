@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             tools:context=".ui.TextEditor"
+             tools:ignore="MissingDefaultResource"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+    >
+        <Switch android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:checked="false"
+                android:text="Important"
+                android:padding="20dp"
+                android:id = "@+id/importanceEdit"
+                android:thumbTint="@color/purple_200"
+                android:layout_marginLeft="40dp"
+
+        />
+        <Switch android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:checked="false"
+                android:text="Archived?"
+                android:padding="20dp"
+                android:gravity="end"
+                android:id = "@+id/archiveEdit"
+                android:thumbTint="@color/purple_200"
+
+        />
+    </LinearLayout>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:gravity="top|left"
+              android:id = "@+id/titleEdit"
+    >
+
+    </EditText>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="fill_parent"
+                                                       >
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:gravity="top|left"
+                  android:id = "@+id/contentEdit"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_marginTop="10dp"
+                  app:layout_constraintBottom_toTopOf="@+id/createButton"
+                  android:layout_marginBottom="10dp"
+
+        >
+        </EditText>
+        <Button android:layout_height="52dp"
+                android:layout_width="match_parent"
+                android:text="Create"
+                android:layout_margin="10dp"
+                android:id = "@+id/createButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+        >
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>
+</FrameLayout>

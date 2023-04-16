@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             tools:context=".ui.MainPage"
+             tools:ignore="MissingDefaultResource">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left"
+
+    >
+        <Switch android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:checked="false"
+                android:text="Show Archived?"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="end"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="0dp"
+                android:id = "@+id/archiveSwitch"
+                android:thumbTint="@color/purple_200"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="52dp"
+                      app:layout_constraintTop_toBottomOf="@+id/archiveSwitch"
+                      android:layout_marginTop="0dp"
+                      android:id="@+id/search_container"
+                      android:orientation="horizontal"
+
+        >
+            <EditText android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_margin="4dp"
+                      app:layout_constraintTop_toBottomOf="parent"
+                      android:layout_marginTop="0dp"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      android:layout_marginLeft="10dp"
+                      app:layout_constraintRight_toLeftOf="@+id/search_button"
+                      android:layout_marginRight="20dp"
+                      android:id="@+id/searchEdit"
+            />
+
+
+            <Button android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:text="Search"
+                        android:layout_margin="4dp"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        android:layout_marginTop="0dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/search_button"
+            />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/search_container"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="100dp"
+
+
+
+        >
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id = "@+id/NoteHolder"
+                          android:orientation="vertical"
+                          android:layout_gravity="top|center"
+            >
+
+            </LinearLayout>
+
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="30dp"
+                app:backgroundTint="@color/purple_700"
+                android:id = "@+id/addButton"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="+"
+                android:textSize="30dp"
+                android:elevation="16dp"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="38dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="47dp"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
